@@ -21,7 +21,8 @@
     }
   </style>
   <link rel="stylesheet" href="css/bootstrap.min.css">
-     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" /> 
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
   <link rel="stylesheet" href="css/main.css">
   <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
   <!-- Styling for the Carousel -->
@@ -30,12 +31,14 @@
 
 <body>
   <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. 
+            Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve 
+            your experience.</p>
         <![endif]-->
   <nav class="navbar navbar-inverse">
     <div class="container-fluid">
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-2">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -43,13 +46,13 @@
           </button>
         <a class="navbar-brand" href="#">Mt. Rainier Info</a>
       </div>
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+      <div class="collapse navbar-collapse" id="navbar-collapse-2">
         <ul class="nav navbar-nav">
           <li class="active"><a href="#home">Home</a></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">About <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
-              <li><a href="#description">Description</a></li>
+              <li><a href="#about">About</a></li>
               <li><a href="#history">History</a></li>
               <li><a href="#stats">Stats</a></li>
             </ul>
@@ -83,9 +86,7 @@
             <img class="first-slide" src="img\carousel\Climbers_Crossing_Crevasse_Mt._rainier.jpg" alt="Climbers Crossing a Crevasse">
             <div class="container">
               <div class="carousel-caption">
-                <h1>Climbers Crossing a Crevasse</h1>
-                <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons
-                  on the left and right might not load/display properly due to web browser security rules.</p>
+                <h2>Climbers Crossing a Crevasse</h2>
               </div>
             </div>
           </div>
@@ -93,9 +94,7 @@
             <img class="second-slide" src="img\carousel\Flickr_-_The_U.S._Army_-_Jump_over_Mt._Rainier.jpg" alt="US Army Jump Over Mt. Rainier">
             <div class="container">
               <div class="carousel-caption">
-                <h1>US Army Jump Over Mount Rainier</h1>
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.
-                  Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                <h2>US Army Jump Over Mount Rainier</h2>
               </div>
             </div>
           </div>
@@ -103,9 +102,7 @@
             <img class="third-slide" src="img\carousel\Mount_Rainier_-_Paradise_-_Dead_Horse_Creek_Trail_-_August_2014_-_01.jpg" alt="Dead Horse Creek Trail">
             <div class="container">
               <div class="carousel-caption">
-                <h1>Dead Horse Creek Trail</h1>
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.
-                  Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                <h2>Dead Horse Creek Trail</h2>
               </div>
             </div>
           </div>
@@ -113,9 +110,7 @@
             <img class="second-slide" src="img\carousel\Mount_Rainier_-_Paradise_Meadow_in_July_03.jpg" alt="Paradise Meadow in July">
             <div class="container">
               <div class="carousel-caption">
-                <h1>Paradise Meadow in July</h1>
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.
-                  Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                <h2>Paradise Meadow in July</h2>
               </div>
             </div>
           </div>
@@ -123,9 +118,7 @@
             <img class="second-slide" src="img\carousel\Mount_Rainier_and_lake_reflection.jpg" alt="Mount Rainer and Lake Reflection">
             <div class="container">
               <div class="carousel-caption">
-                <h1>Mount Rainier Lake Reflection</h1>
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.
-                  Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                <h2>Mount Rainier Lake Reflection</h2>
               </div>
             </div>
           </div>
@@ -133,9 +126,7 @@
             <img class="second-slide" src="img\carousel\Mount_Rainier_from_Paradise_meadow,_August_2014_-_03.jpg" alt="Mount Rainier from Paradise Meadow">
             <div class="container">
               <div class="carousel-caption">
-                <h1>Mount Rainier From Paradise Meadow</h1>
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.
-                  Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                <h2>Mount Rainier From Paradise Meadow</h2>
               </div>
             </div>
           </div>
@@ -143,9 +134,7 @@
             <img class="second-slide" src="img\carousel\Mount_Rainier_sunset_and_clouds.jpg" alt="Mount Rainier Sunset and Clouds">
             <div class="container">
               <div class="carousel-caption">
-                <h1>Mount Rainier Sunset</h1>
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.
-                  Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                <h2>Mount Rainier Sunset</h2>
               </div>
             </div>
           </div>
@@ -153,9 +142,7 @@
             <img class="second-slide" src="img\carousel\Nisqually_River_near_Cougar_Rock_01.jpg" alt="Nisqually River near Cougar Rock">
             <div class="container">
               <div class="carousel-caption">
-                <h1>Nisqually River Near Cougar Rock</h1>
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.
-                  Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                <h2>Nisqually River Near Cougar Rock</h2>
               </div>
             </div>
           </div>
@@ -189,6 +176,7 @@
         </ul>
         <!-- Tab panes -->
         <div class="tab-content">
+          <!-- About Section -->
           <div role="tabpanel" class="tab-pane active" id="about">
             <p>Mount Rainier (pronounced: <b>/reɪˈnɪər/</b>) is the highest mountain of the Cascade Range of the Pacific Northwest,
               and the highest mountain in the state of Washington. It is a large active stratovolcano located 54 miles (87
@@ -198,6 +186,8 @@
               amount of glacial ice, Mt. Rainier could potentially produce massive lahars that could threaten the entire
               Puyallup River valley.</p>
           </div>
+          <!-- End of About Section -->
+          <!-- History Section -->
           <div role="tabpanel" class="tab-pane" id="history">
             <p>At the time of European contact, the river valleys and other areas near the mountain were inhabited by many Pacific
               Northwest tribes who hunted and gathered berries in its forests and mountain meadows. These included the Nisqually,
@@ -215,6 +205,8 @@
               the benefit and enjoyment of the people" and "... for the preservation from injury or spoliation of all timber,
               mineral deposits, natural curiosities, or wonders within said park, and their retention in their natural condition."</p>
           </div>
+          <!-- End of History Section -->
+          <!-- Statistics Section -->
           <div role="tabpanel" class="tab-pane" id="stats">
             <dl>
               <dt>Elevation</dt>
@@ -235,26 +227,26 @@
               <dd>Rock/ice climb via Disappointment Cleaver</dd>
             </dl>
           </div>
+          <!-- End of Statistics Section -->
+          <!-- Maps Section -->
           <div role="tabpanel" class="tab-pane" id="map">
             <h2>Map</h2>
-            <!-- TODO: Use Leaflet.js to add a map showing Mt. Rainier's location
-                    http://leafletjs.com/examples/quick-start.html -->
-<div id="mapid" style="width: 600px; height: 400px;"></div>
-<script>
+            <div id="mapid" style="width: 600px; height: 400px;"></div>
+            <script>
+              var mymap = L.map('mapid').setView([46.8503956, -121.7750116], 13);
 
-	var mymap = L.map('mapid').setView([51.505, -0.09], 13);
-
-	L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpandmbXliNDBjZWd2M2x6bDk3c2ZtOTkifQ._QA7i5Mpkd_m30IGElHziw', {
-		maxZoom: 18,
-		attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
-			'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-			'Imagery © <a href="http://mapbox.com">Mapbox</a>',
-		id: 'mapbox.streets'
-	}).addTo(mymap);
-
-</script>
-</div>
-
+              L.tileLayer(
+                'https://api.mapbox.com/styles/v1/mattfromseattle/ciyjjb3kf000a2rphe8bomoll/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWF0dGZyb21zZWF0dGxlIiwiYSI6ImNpeWpqOTVrcDA1Njkyd29ldjViaW50eDcifQ.3lxfg0LRGoHG7PVVLC6J9Q', {
+                  maxZoom: 18,
+                  attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+                    '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+                    'Imagery © <a href="http://mapbox.com">Mapbox</a>',
+                  id: 'mapbox.streets'
+                }).addTo(mymap);
+            </script>
+          </div>
+          <!-- End of Maps Section -->
+          <!-- Links Section -->
           <div role="tabpanel" class="tab-pane" id="links">
             <p class="lead">Learn more about Mt. Rainier by visiting these websites:</p>
             <ul class="links-list">
@@ -264,10 +256,10 @@
               <li><a href="https://content.lib.washington.edu/warnerweb/essay.html">John Muir's Ascent of Mt. Rainier</a></li>
             </ul>
           </div>
+          <!-- End of Links Section -->
         </div>
       </div>
       <hr>
-
       <footer>
         <p>Made by Matt Dewey in 2017. This page uses images and text from <a href="http://en.wikipedia.org/wiki/Mount_Rainier">The Wikipedia Mt. Rainier Page</a>.</p>
       </footer>
