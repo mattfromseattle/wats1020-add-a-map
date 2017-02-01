@@ -1,28 +1,35 @@
 // A $( document ).ready() block.
-$( document ).ready(function() {
-    console.log( "ready!" );
-    
+$(document).ready(function () {
+  console.log("ready!");
 
-// TODO: Inside of your on ready handler, invoke the Leaflet.js library
-// to draw a map in your `#map-container` div.
-              var mymap = L.map('mapid').setView([46.8503956, -121.7750116], 13);
+  var locations = new L.LayerGroup();
 
-              L.tileLayer(
-                'https://api.mapbox.com/styles/v1/mattfromseattle/ciyjjb3kf000a2rphe8bomoll/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWF0dGZyb21zZWF0dGxlIiwiYSI6ImNpeWpqOTVrcDA1Njkyd29ldjViaW50eDcifQ.3lxfg0LRGoHG7PVVLC6J9Q', {
-                  maxZoom: 18,
-                  attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
-                    '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-                    'Imagery © <a href="http://mapbox.com">Mapbox</a>',
-                  id: 'mapbox.streets'
-                }).addTo(mymap);
+  L.marker([46.8558098, -121.4844578]).bindPopup('This is Dewey Lake.').addTo(locations),
+    L.marker([46.7381008, -121.5688132]).bindPopup('This is Ohanapecosh Campground').addTo(locations),
+    L.marker([46.7859035, -121.7388493]).bindPopup('This is the Henry M. Jackson Visitor Center').addTo(locations),
 
-// TODO: Add 2 layers to your map you have visuals. Use the Open Street Maps
-// tiles served through the MapQuest CDN. Consult this example to set up
-// the map tiles layers:
+    mbAttr = 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+    '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+    'Imagery © <a href="http://mapbox.com">Mapbox</a>',
+    mbUrl = 'https://api.mapbox.com/styles/v1/mattfromseattle/ciyng7ead007l2rqqrehjy6us/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWF0dGZyb21zZWF0dGxlIiwiYSI6ImNpeWdxbDlvejA0YzEycXA4MWs0Mml3NzAifQ.2XpyO-n_5jYYgcMnjldCQA';
 
+  var grayscale = L.tileLayer(mbUrl, {
 
-// TODO: Customize that Map to show markers with popups at no fewer than 3
-// interesting locations. (You'll need to figure out the latitude/longitude for
-// these locations using a mapping tool such as Google Maps.)
+    });
 
+  var map = L.map('map', {
+    center: [46.845063, -121.766570],
+    zoom: 11,
+    layers: [grayscale, locations]
+  });
+
+  var baseLayers = {
+
+  };
+
+  var overlays = {
+    "Locations": locations
+  };
+
+  L.control.layers(baseLayers, overlays).addTo(map);
 });
